@@ -1,34 +1,152 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Test Agent </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savory Bites - Menu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8B5A2B',
+                        secondary: '#D4A59A',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-<vapi-widget
-  public-key="63f384d0-b600-4ca0-b79f-5de1ff7bd9f6"
-  assistant-id="8ae608f2-6073-4ab6-8ffb-4b5fc22c8d25"
-  mode="voice"
-  theme="dark"
-  base-bg-color="#000000"
-  accent-color="#14B8A6"
-  cta-button-color="#000000"
-  cta-button-text-color="#ffffff"
-  border-radius="large"
-  size="full"
-  position="bottom-right"
-  title="TALK WITH AI"
-  start-button-text="Start"
-  end-button-text="End Call"
-  chat-first-message="Hey, How can I help you today?"
-  chat-placeholder="Type your message..."
-  voice-show-transcript="true"
-  consent-required="true"
-  consent-title="Terms and conditions"
-  consent-content="By clicking "Agree," and each time I interact with this AI agent, I consent to the recording, storage, and sharing of my communications with third-party service providers, and as otherwise described in our Terms of Service."
-  consent-storage-key="vapi_widget_consent"
-></vapi-widget>
+<body class="bg-amber-50">
+    <div class="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <!-- Header -->
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-bold text-primary mb-4">Savory Bites</h1>
+            <div class="w-24 h-1 bg-secondary mx-auto"></div>
+        </div>
 
-<script src="https://unpkg.com/@vapi-ai/client-sdk-react/dist/embed/widget.umd.js" async type="text/javascript"></script>
+        <!-- Menu Sections -->
+        <div class="grid md:grid-cols-2 gap-12">
+            <!-- Starters -->
+            <div class="menu-section">
+                <h2 class="text-3xl font-semibold text-primary mb-6 pb-2 border-b-2 border-secondary">Starters</h2>
+                <div class="space-y-6">
+                    <div class="menu-item">
+                        <div class="flex justify-between">
+                            <h3 class="text-xl font-medium">Bruschetta</h3>
+                            <span class="text-primary font-bold">$8.50</span>
+                        </div>
+                        <p class="text-gray-600 mt-1">Toasted bread topped with tomatoes, garlic, and fresh basil</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="flex justify-between">
+                            <h3 class="text-xl font-medium">Calamari</h3>
+                            <span class="text-primary font-bold">$12.00</span>
+                        </div>
+                        <p class="text-gray-600 mt-1">Crispy fried squid served with lemon aioli</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="flex justify-between">
+                            <h3 class="text-xl font-medium">Caprese Salad</h3>
+                            <span class="text-primary font-bold">$10.50</span>
+                        </div>
+                        <p class="text-gray-600 mt-1">Fresh mozzarella, tomatoes, and basil drizzled with balsamic glaze</p>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Mains -->
+            <div class="menu-section">
+                <h2 class="text-3xl font-semibold text-primary mb-6 pb-2 border-b-2 border-secondary">Main Courses</h2>
+                <div class="space-y-6">
+                    <div class="menu-item">
+                        <div class="flex justify-between">
+                            <h3 class="text-xl font-medium">Filet Mignon</h3>
+                            <span class="text-primary font-bold">$32.00</span>
+                        </div>
+                        <p class="text-gray-600 mt-1">8oz tender beef with roasted vegetables and red wine reduction</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="flex justify-between">
+                            <h3 class="text-xl font-medium">Grilled Salmon</h3>
+                            <span class="text-primary font-bold">$24.50</span>
+                        </div>
+                        <p class="text-gray-600 mt-1">Atlantic salmon with lemon butter sauce and asparagus</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="flex justify-between">
+                            <h3 class="text-xl font-medium">Mushroom Risotto</h3>
+                            <span class="text-primary font-bold">$18.00</span>
+                        </div>
+                        <p class="text-gray-600 mt-1">Creamy arborio rice with wild mushrooms and parmesan</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desserts -->
+            <div class="menu-section">
+                <h2 class="text-3xl font-semibold text-primary mb-6 pb-2 border-b-2 border-secondary">Desserts</h2>
+                <div class="space-y-6">
+                    <div class="menu-item">
+                        <div class="flex justify-between">
+                            <h3 class="text-xl font-medium">Tiramisu</h3>
+                            <span class="text-primary font-bold">$8.00</span>
+                        </div>
+                        <p class="text-gray-600 mt-1">Classic Italian dessert with coffee-soaked ladyfingers</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="flex justify-between">
+                            <h3 class="text-xl font-medium">Chocolate Lava Cake</h3>
+                            <span class="text-primary font-bold">$9.50</span>
+                        </div>
+                        <p class="text-gray-600 mt-1">Warm chocolate cake with a molten center, served with vanilla ice cream</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="flex justify-between">
+                            <h3 class="text-xl font-medium">Crème Brûlée</h3>
+                            <span class="text-primary font-bold">$8.50</span>
+                        </div>
+                        <p class="text-gray-600 mt-1">Rich custard topped with a layer of caramelized sugar</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Drinks -->
+            <div class="menu-section">
+                <h2 class="text-3xl font-semibold text-primary mb-6 pb-2 border-b-2 border-secondary">Drinks</h2>
+                <div class="space-y-6">
+                    <div class="menu-item">
+                        <div class="flex justify-between">
+                            <h3 class="text-xl font-medium">House Red Wine</h3>
+                            <span class="text-primary font-bold">$9.00/glass</span>
+                        </div>
+                        <p class="text-gray-600 mt-1">Cabernet Sauvignon, California</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="flex justify-between">
+                            <h3 class="text-xl font-medium">Craft Beer</h3>
+                            <span class="text-primary font-bold">$7.00</span>
+                        </div>
+                        <p class="text-gray-600 mt-1">Local IPA or Lager</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="flex justify-between">
+                            <h3 class="text-xl font-medium">Signature Cocktails</h3>
+                            <span class="text-primary font-bold">$12.00</span>
+                        </div>
+                        <p class="text-gray-600 mt-1">Ask your server for today's special creations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        feather.replace();
+    </script>
 </body>
 </html>
