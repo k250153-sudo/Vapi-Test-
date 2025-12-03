@@ -1049,34 +1049,22 @@
             observer.observe(el);
         });
     </script>
-   <script>
-      var vapiInstance = null;
-      const assistant = "c4193a6a-aa52-40ec-815b-a073f1e9cad0"; // Your assistant ID
-      const apiKey = "6vja0hWQXdBHrRwXE5zx"; // Your Public key from Vapi Dashboard
-      const buttonConfig = {
-        position: "bottom-right"
-        theme: "dark", // or "dark"
-  mainLabel: "Talk to Assistant",
-  startButtonText: "Start Voice Chat",
-  endButtonText: "End Call"// Position the widget at bottom right
-      }; 
-      (function (d, t) {
-        var g = document.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-        g.src =
-          "https://cdn.jsdelivr.net/gh/VapiAI/html-script-tag@latest/dist/assets/index.js";
-        g.defer = true;
-        g.async = true;
-        s.parentNode.insertBefore(g, s);
-        g.onload = function () {
-          vapiInstance = window.vapiSDK.run({
-            apiKey: apiKey, // mandatory
-            assistant: assistant, // mandatory
-            config: buttonConfig, // optional
-          });
-        };
-      })(document, "script");
-    </script>
+ <script src="https://unpkg.com/@vapi-ai/client-sdk-react/dist/embed/widget.umd.js" async type="text/javascript"></script>
+    
+    <vapi-widget
+  public-key="6vja0hWQXdBHrRwXE5zx"
+  assistant-id="c4193a6a-aa52-40ec-815b-a073f1e9cad0"
+  mode="voice"
+  theme="light"
+  position="bottom-right"
+  main-label="Talk to Assistant"
+  start-button-text="Start Voice Chat"
+  end-button-text="End Call"
+  base-color="#14B8A6"
+  accent-color="#0F766E"
+></vapi-widget>
+
+
 
 </body>
 </html>
